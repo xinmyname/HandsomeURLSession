@@ -21,11 +21,11 @@ Install HandsomeURLSession into your project using [CocoaPods](https://cocoapods
 
 1. Get an NSURLSession
 
-    let session = NSURLSession.sharedSession()
+    `let session = NSURLSession.sharedSession()`
 
 2. Create an NSURLRequest instance for the data you want load
 
-    let textRequest = NSURLRequest(URL: NSURL(string: "http://loripsum.net/api/plaintext")!)
+    `let textRequest = NSURLRequest(URL: NSURL(string: "http://loripsum.net/api/plaintext")!)`
 
 3. Call NSURLSession for the type you are interested in, e.g. "text"
 
@@ -39,6 +39,68 @@ Install HandsomeURLSession into your project using [CocoaPods](https://cocoapods
 ### Or synchronously...
 
     let text = try session.awaitText(forRequest:textRequest)
+
+## Other Examples
+
+### Loading JSON
+
+    do {
+        let jsonRequest = NSURLRequest(URL: NSURL(string: "http://date.jsontest.com/")!)
+        let jsonResult = try session.awaitJson(forRequest: jsonRequest)
+        let date = jsonResult["date"]
+        NSLog("\(date)")
+    }
+    catch let error as NSError {
+        NSLog("JSON no bueño - \(error.localizedDescription)")
+    }
+
+### POSTing data without content in the response
+
+    do {
+        var voidRequest = NSMutableURLRequest(URL: NSURL(string: "https://meta.lotto/api")!)
+        voidRequest.HTTPMethod = "POST"
+        voidRequest.HTTPBody = try NSJSONSerialization.dataWithJSONObject([4,8,15,16,23,42], options: .PrettyPrinted)
+        try session.awaitVoid(forRequest: voidRequest)
+        print("OK")
+    }
+    catch let error as NSError {
+        NSLog("Void no bueño - \(error.localizedDescription)")
+    }
+
+### Loading XML
+
+    @objc
+    class WxParserDelegate : NSObject, NSXMLParserDelegate {
+
+        private var _elements:[String] = []
+
+        func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+            _elements.append(elementName)
+        }
+
+        func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+            _elements.removeLast()
+        }
+
+        func parser(parser: NSXMLParser, foundCharacters string: String) {
+            let path = _elements.joinWithSeparator("/")
+            if (path == "dwml/data/moreWeatherInformation") {
+                NSLog("\(string)")
+            }
+        }
+    }
+
+    do {
+        var xmlRequest = NSMutableURLRequest(URL: NSURL(string: "http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?whichClient=NDFDgen&lat=38.99&lon=-77.01")!)
+        var xmlParser = try session.awaitXml(forRequest: xmlRequest)
+        let delegate = WxParserDelegate()
+        xmlParser.delegate = delegate
+        xmlParser.parse()
+    }
+    catch let error as NSError {
+        NSLog("XML no bueño - \(error.localizedDescription)")
+    }
+
 
 ## Thanks
 
