@@ -6,12 +6,10 @@
 //
 //
 #include "TargetConditionals.h"
-#if TARGET_OS_IPHONE
-    #import <UIKit/UIKit.h>
-#elif TARGET_OS_SIMULATOR
-    #import <UIKit/UIKit.h>
-#elif TARGET_OS_MAC
-    #import <Cocoa/Cocoa.h>
+#if TARGET_OS_IOS || TARGET_OS_WATCH || TARGET_OS_TV
+#import <UIKit/UIKit.h>
+#else
+#import <Cocoa/Cocoa.h>
 #endif
 
 //! Project version number for HandsomeURLSession.
