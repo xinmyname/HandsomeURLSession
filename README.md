@@ -44,7 +44,9 @@ let task = session.textTask(textRequest) { (text:String?, response:NSURLResponse
 
 ### Or synchronously...
 
-    let text = try session.awaitText(forRequest:textRequest)
+```swift
+let text = try session.awaitText(forRequest:textRequest)
+```
 
 ## Other Examples
 
@@ -68,7 +70,7 @@ catch let error as NSError {
 do {
     var voidRequest = NSMutableURLRequest(URL: NSURL(string: "https://mega.lotto/api")!)
     voidRequest.HTTPMethod = "POST"
-    voidRequest.HTTPBody = try NSJSONSerialization.dataWithJSONObject([4,8,15,16,23,42], options: .PrettyPrinted)
+    voidRequest.HTTPBody = try NSJSONSerialization.dataWithJSONObject([4,8,15,16,23,42], options: [])
     try session.awaitVoid(forRequest: voidRequest)
     print("OK")
 }
