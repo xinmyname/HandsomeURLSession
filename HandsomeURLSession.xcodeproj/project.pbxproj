@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C6FC6B11D3E861200F52AE1 /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6AA1D3E861200F52AE1 /* FirstTest.swift */; };
+		8C6FC6B11D3E861200F52AE1 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6AA1D3E861200F52AE1 /* URLSessionExtensions.swift */; };
 		8C6FC6B21D3E861200F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C6FC6BA1D3E863D00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C6FC6BB1D3E863D00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C6FC6BC1D3E863E00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C6FC6BD1D3E864B00F52AE1 /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6AA1D3E861200F52AE1 /* FirstTest.swift */; };
-		8C6FC6BE1D3E864B00F52AE1 /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6AA1D3E861200F52AE1 /* FirstTest.swift */; };
-		8C6FC6BF1D3E864C00F52AE1 /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6AA1D3E861200F52AE1 /* FirstTest.swift */; };
-		8C6FC6D71D3E8D8500F52AE1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6D61D3E8D8500F52AE1 /* README.md */; };
-		8C6FC6D91D3E8D9300F52AE1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8C6FC6D81D3E8D9300F52AE1 /* LICENSE */; };
+		8C6FC6BD1D3E864B00F52AE1 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6AA1D3E861200F52AE1 /* URLSessionExtensions.swift */; };
+		8C6FC6BE1D3E864B00F52AE1 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6AA1D3E861200F52AE1 /* URLSessionExtensions.swift */; };
+		8C6FC6BF1D3E864C00F52AE1 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC6AA1D3E861200F52AE1 /* URLSessionExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +22,7 @@
 		8C6FC6811D3E7F1900F52AE1 /* HandsomeURLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HandsomeURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6FC68E1D3E7F2800F52AE1 /* HandsomeURLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HandsomeURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6FC69B1D3E7F3800F52AE1 /* HandsomeURLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HandsomeURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C6FC6AA1D3E861200F52AE1 /* FirstTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstTest.swift; path = Sources/FirstTest.swift; sourceTree = "<group>"; };
+		8C6FC6AA1D3E861200F52AE1 /* URLSessionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionExtensions.swift; path = Sources/URLSessionExtensions.swift; sourceTree = "<group>"; };
 		8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandsomeURLSession.h; path = Sources/HandsomeURLSession.h; sourceTree = "<group>"; };
 		8C6FC6AC1D3E861200F52AE1 /* HandsomeURLSession.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = HandsomeURLSession.modulemap; path = Sources/HandsomeURLSession.modulemap; sourceTree = "<group>"; };
 		8C6FC6AD1D3E861200F52AE1 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-iOS.plist"; path = "Sources/Info-iOS.plist"; sourceTree = "<group>"; };
@@ -91,7 +89,7 @@
 		8C6FC6A91D3E860400F52AE1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8C6FC6AA1D3E861200F52AE1 /* FirstTest.swift */,
+				8C6FC6AA1D3E861200F52AE1 /* URLSessionExtensions.swift */,
 				8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */,
 				8C6FC6AC1D3E861200F52AE1 /* HandsomeURLSession.modulemap */,
 				8C6FC6AD1D3E861200F52AE1 /* Info-iOS.plist */,
@@ -259,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C6FC6D91D3E8D9300F52AE1 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C6FC6D71D3E8D8500F52AE1 /* README.md in Sources */,
-				8C6FC6B11D3E861200F52AE1 /* FirstTest.swift in Sources */,
+				8C6FC6B11D3E861200F52AE1 /* URLSessionExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C6FC6BD1D3E864B00F52AE1 /* FirstTest.swift in Sources */,
+				8C6FC6BD1D3E864B00F52AE1 /* URLSessionExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C6FC6BE1D3E864B00F52AE1 /* FirstTest.swift in Sources */,
+				8C6FC6BE1D3E864B00F52AE1 /* URLSessionExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C6FC6BF1D3E864C00F52AE1 /* FirstTest.swift in Sources */,
+				8C6FC6BF1D3E864C00F52AE1 /* URLSessionExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
