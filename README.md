@@ -44,20 +44,22 @@ Install HandsomeURLSession into your project using [CocoaPods](https://cocoapods
 
 ### Loading JSON
 
-    do {
-        let jsonRequest = NSURLRequest(URL: NSURL(string: "http://date.jsontest.com/")!)
-        let jsonResult = try session.awaitJson(forRequest: jsonRequest)
-        let date = jsonResult["date"]
-        NSLog("\(date)")
-    }
-    catch let error as NSError {
-        NSLog("JSON no bueño - \(error.localizedDescription)")
-    }
+```swift
+do {
+    let jsonRequest = NSURLRequest(URL: NSURL(string: "http://date.jsontest.com/")!)
+    let jsonResult = try session.awaitJson(forRequest: jsonRequest)
+    let date = jsonResult["date"]
+    NSLog("\(date)")
+}
+catch let error as NSError {
+    NSLog("JSON no bueño - \(error.localizedDescription)")
+}
+```
 
 ### POSTing data without content in the response
 
     do {
-        var voidRequest = NSMutableURLRequest(URL: NSURL(string: "https://meta.lotto/api")!)
+        var voidRequest = NSMutableURLRequest(URL: NSURL(string: "https://mega.lotto/api")!)
         voidRequest.HTTPMethod = "POST"
         voidRequest.HTTPBody = try NSJSONSerialization.dataWithJSONObject([4,8,15,16,23,42], options: .PrettyPrinted)
         try session.awaitVoid(forRequest: voidRequest)
