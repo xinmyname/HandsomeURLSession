@@ -40,6 +40,8 @@ let task = session.textTask(textRequest) { (text:String?, response:NSURLResponse
     // Do something interesting with text
     NSLog("\(text)")
 }
+
+task.resume()
 ```
 
 ### Or synchronously...
