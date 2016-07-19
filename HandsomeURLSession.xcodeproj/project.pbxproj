@@ -31,6 +31,7 @@
 		8C6FC6B01D3E861200F52AE1 /* Info-watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-watchOS.plist"; path = "Sources/Info-watchOS.plist"; sourceTree = "<group>"; };
 		8C6FC6D61D3E8D8500F52AE1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8C6FC6D81D3E8D9300F52AE1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8C6FC6DA1D3E9E8F00F52AE1 /* HandsomeURLSession.podspec */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = HandsomeURLSession.podspec; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 			children = (
 				8C6FC6D81D3E8D9300F52AE1 /* LICENSE */,
 				8C6FC6D61D3E8D8500F52AE1 /* README.md */,
+				8C6FC6DA1D3E9E8F00F52AE1 /* HandsomeURLSession.podspec */,
 				8C6FC6A91D3E860400F52AE1 /* Sources */,
 				8C6FC6741D3E7C2900F52AE1 /* Products */,
 			);
