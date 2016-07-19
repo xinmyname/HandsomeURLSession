@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8C6FC6721D3E7C2900F52AE1"
-               BuildableName = "HandsomeURLSession iOS.framework"
+               BuildableName = "HandsomeURLSession.framework"
                BlueprintName = "HandsomeURLSession iOS"
                ReferencedContainer = "container:HandsomeURLSession.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C6FC6721D3E7C2900F52AE1"
-            BuildableName = "HandsomeURLSession iOS.framework"
+            BuildableName = "HandsomeURLSession.framework"
             BlueprintName = "HandsomeURLSession iOS"
             ReferencedContainer = "container:HandsomeURLSession.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C6FC6721D3E7C2900F52AE1"
-            BuildableName = "HandsomeURLSession iOS.framework"
+            BuildableName = "HandsomeURLSession.framework"
             BlueprintName = "HandsomeURLSession iOS"
             ReferencedContainer = "container:HandsomeURLSession.xcodeproj">
          </BuildableReference>

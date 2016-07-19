@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8C6FC6801D3E7F1900F52AE1"
-               BuildableName = "HandsomeURLSession watchOS.framework"
+               BuildableName = "HandsomeURLSession.framework"
                BlueprintName = "HandsomeURLSession watchOS"
                ReferencedContainer = "container:HandsomeURLSession.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C6FC6801D3E7F1900F52AE1"
-            BuildableName = "HandsomeURLSession watchOS.framework"
+            BuildableName = "HandsomeURLSession.framework"
             BlueprintName = "HandsomeURLSession watchOS"
             ReferencedContainer = "container:HandsomeURLSession.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C6FC6801D3E7F1900F52AE1"
-            BuildableName = "HandsomeURLSession watchOS.framework"
+            BuildableName = "HandsomeURLSession.framework"
             BlueprintName = "HandsomeURLSession watchOS"
             ReferencedContainer = "container:HandsomeURLSession.xcodeproj">
          </BuildableReference>
