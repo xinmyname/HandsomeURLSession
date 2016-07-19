@@ -6,6 +6,13 @@
 //  Copyright © 2016 Clean Water Services. All rights reserved.
 //
 
+#if os(OSX)
+    import AppKit
+    public typealias Image = NSImage
+#else
+    import UIKit
+    public typealias Image = UIImage
+#endif
 
 public extension NSURLSession {
     
@@ -98,24 +105,24 @@ public extension NSURLSession {
         })
     }
     
-    public func imageTaskWithURL(url:NSURL, completionHandler:(UIImage?, NSURLResponse?, NSError?) -> Void) -> NSURLSessionDataTask {
+    public func imageTaskWithURL(url:NSURL, completionHandler:(Image?, NSURLResponse?, NSError?) -> Void) -> NSURLSessionDataTask {
         
         return self.dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) in
             
             if let data = data {
-                completionHandler(UIImage(data: data), response, error)
+                completionHandler(Image(data: data), response, error)
             } else {
                 completionHandler(nil, response, error)
             }
         })
     }
     
-    public func imageTask(request:NSURLRequest, completionHandler:(UIImage?, NSURLResponse?, NSError?) -> Void) -> NSURLSessionDataTask {
+    public func imageTask(request:NSURLRequest, completionHandler:(Image?, NSURLResponse?, NSError?) -> Void) -> NSURLSessionDataTask {
         
         return self.dataTaskWithRequest(request, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) in
             
             if let data = data {
-                completionHandler(UIImage(data: data), response, error)
+                completionHandler(Image(data: data), response, error)
             } else {
                 completionHandler(nil, response, error)
             }
@@ -235,11 +242,11 @@ public extension NSURLSession {
         return try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
     }
     
-    public func awaitImage(forRequest request:NSURLRequest) throws -> UIImage {
+    public func awaitImage(forRequest request:NSURLRequest) throws -> Image {
         
         let data = try self.awaitData(forRequest:request)
         
-        guard let image = UIImage(data: data) else {
+        guard let image = Image(data: data) else {
             throw ImageDecoding.error
         }
         
