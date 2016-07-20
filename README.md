@@ -35,87 +35,87 @@ Install HandsomeURLSession into your project using [CocoaPods](https://cocoapods
 
 ### Asynchronously
 
-    ```swift
-    let task = session.textTaskWithRequest(request) { (text:String?, response:NSHTTPURLResponse?, error:NSError?) in
-        // Do something interesting with text
-        NSLog("\(text)")
-    }
+```swift
+let task = session.textTaskWithRequest(request) { (text:String?, response:NSHTTPURLResponse?, error:NSError?) in
+    // Do something interesting with text
+    NSLog("\(text)")
+}
 
-    task.resume()
-    ```
+task.resume()
+```
 
 ### Or synchronously...
 
-    ```swift
-    let text = try session.awaitTextWithRequest(textRequest)
-    ```
+```swift
+let text = try session.awaitTextWithRequest(textRequest)
+```
 
 ## Other Examples
 
 ### Loading JSON
 
-    ```swift
-    do {
-        let request = NSURLRequest(URL: NSURL(string: "http://date.jsontest.com/")!)
-        let json = try session.awaitJsonWithRequest(request)
-        let date = json["date"]
-        NSLog("\(date)")
-    }
-    catch let error as NSError {
-        NSLog("\(error.localizedDescription)")
-    }
-    ```
+```swift
+do {
+    let request = NSURLRequest(URL: NSURL(string: "http://date.jsontest.com/")!)
+    let json = try session.awaitJsonWithRequest(request)
+    let date = json["date"]
+    NSLog("\(date)")
+}
+catch let error as NSError {
+    NSLog("\(error.localizedDescription)")
+}
+```
 
 ### POSTing data without content in the response
 
-    ```swift
-    do {
-        var request = NSMutableURLRequest(URL: NSURL(string: "https://mega.lotto/api")!)
-        request.HTTPMethod = "POST"
-        request.HTTPBody = try NSJSONSerialization.dataWithJSONObject([4,8,15,16,23,42], options: [])
-        try session.awaitVoidWithRequest(request)
-        print("OK")
-    }
-    catch let error as NSError {
-        NSLog("\(error.localizedDescription)")
-    }
-    ```
+```swift
+do {
+    var request = NSMutableURLRequest(URL: NSURL(string: "https://mega.lotto/api")!)
+    request.HTTPMethod = "POST"
+    request.HTTPBody = try NSJSONSerialization.dataWithJSONObject([4,8,15,16,23,42], options: [])
+    try session.awaitVoidWithRequest(request)
+    print("OK")
+}
+catch let error as NSError {
+    NSLog("\(error.localizedDescription)")
+}
+```
 
 ### Loading XML
 
-    ```swift
-    @objc
-    class WxParserDelegate : NSObject, NSXMLParserDelegate {
+```swift
+@objc
+class WxParserDelegate : NSObject, NSXMLParserDelegate {
 
-        private var _elements:[String] = []
+    private var _elements:[String] = []
 
-        func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-            _elements.append(elementName)
-        }
-
-        func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-            _elements.removeLast()
-        }
-
-        func parser(parser: NSXMLParser, foundCharacters string: String) {
-            let path = _elements.joinWithSeparator("/")
-            if (path == "dwml/data/moreWeatherInformation") {
-                NSLog("\(string)")
-            }
-        }
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        _elements.append(elementName)
     }
 
-    do {
-        var request = NSMutableURLRequest(URL: NSURL(string: "http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?whichClient=NDFDgen&lat=38.99&lon=-77.01")!)
-        var parser = try session.awaitXmlWithRequest(request)
-        let delegate = WxParserDelegate()
-        xmlParser.delegate = delegate
-        xmlParser.parse()
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        _elements.removeLast()
     }
-    catch let error as NSError {
-        NSLog("\(error.localizedDescription)")
+
+    func parser(parser: NSXMLParser, foundCharacters string: String) {
+        let path = _elements.joinWithSeparator("/")
+        if (path == "dwml/data/moreWeatherInformation") {
+            NSLog("\(string)")
+        }
     }
-    ```
+}
+
+do {
+    var request = NSMutableURLRequest(URL: NSURL(string: "http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?whichClient=NDFDgen&lat=38.99&lon=-77.01")!)
+    var parser = try session.awaitXmlWithRequest(request)
+    let delegate = WxParserDelegate()
+    xmlParser.delegate = delegate
+    xmlParser.parse()
+}
+catch let error as NSError {
+    NSLog("\(error.localizedDescription)")
+}
+```
 
 ## Thanks
 
