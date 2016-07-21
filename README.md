@@ -1,6 +1,6 @@
 # HandsomeURLSession v1.1
 
-This is a Swift extension to NSURLSession giving you typed responses from HTTP requests, both asynchronous and synchronous. Exceptions are thrown if an error occurs.
+This extension to NSURLSession gives you typed responses from HTTP requests, both asynchronous and synchronous. Exceptions are thrown if an error occurs.
 
 The following typed responses are supported:
 
@@ -14,7 +14,6 @@ The following typed responses are supported:
 
 Install HandsomeURLSession into your project using [CocoaPods](https://cocoapods.org).
 
-    use_frameworks!
     pod 'HandsomeURLSession'
 
 ##Usage
@@ -123,11 +122,10 @@ Shoutout to Basem Emara whose blog post got me started: [Creating Cross-Platform
 
 ## Release History
 
-### v1.0
-* Initial Release
-* Code was Swift 2.2
-
 ### v1.1
 * Backported to Objective-C - Didn't like how Swift framework integrated into projects, especially with Xcode 8 and Swift 3.
 * Compatible with Objective-C, Swift 1, 2 and 3 now.
 
+### v1.0
+* Initial Release
+* Code was Swift 2.2
