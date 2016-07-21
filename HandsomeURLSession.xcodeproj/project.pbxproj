@@ -15,7 +15,20 @@
 		8C6FC6BA1D3E863D00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C6FC6BB1D3E863D00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C6FC6BC1D3E863E00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CC7FE8B1D4162910075E1D1 /* HandsomeURLSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6FC69B1D3E7F3800F52AE1 /* HandsomeURLSession.framework */; };
+		8CC7FE931D41637C0075E1D1 /* WhenTextIsRequestedSynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7FE921D41637C0075E1D1 /* WhenTextIsRequestedSynchronously.swift */; };
+		8CC7FE951D4166FD0075E1D1 /* URLSessionMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7FE941D4166FD0075E1D1 /* URLSessionMocks.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CC7FE8C1D4162910075E1D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C6FC6681D3E712300F52AE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C6FC69A1D3E7F3800F52AE1;
+			remoteInfo = "HandsomeURLSession macOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8C5B9E2F1D40097B001C5135 /* HandsomeURLSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HandsomeURLSession.m; path = Sources/HandsomeURLSession.m; sourceTree = "<group>"; };
@@ -24,7 +37,6 @@
 		8C6FC68E1D3E7F2800F52AE1 /* HandsomeURLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HandsomeURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6FC69B1D3E7F3800F52AE1 /* HandsomeURLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HandsomeURLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandsomeURLSession.h; path = Sources/HandsomeURLSession.h; sourceTree = "<group>"; };
-		8C6FC6AC1D3E861200F52AE1 /* HandsomeURLSession.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = HandsomeURLSession.modulemap; path = Sources/HandsomeURLSession.modulemap; sourceTree = "<group>"; };
 		8C6FC6AD1D3E861200F52AE1 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-iOS.plist"; path = "Sources/Info-iOS.plist"; sourceTree = "<group>"; };
 		8C6FC6AE1D3E861200F52AE1 /* Info-macOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-macOS.plist"; path = "Sources/Info-macOS.plist"; sourceTree = "<group>"; };
 		8C6FC6AF1D3E861200F52AE1 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "Sources/Info-tvOS.plist"; sourceTree = "<group>"; };
@@ -32,6 +44,11 @@
 		8C6FC6D61D3E8D8500F52AE1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8C6FC6D81D3E8D9300F52AE1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8C6FC6DA1D3E9E8F00F52AE1 /* HandsomeURLSession.podspec */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = HandsomeURLSession.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		8CC7FE861D4162910075E1D1 /* HandsomeURLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsomeURLSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CC7FE8A1D4162910075E1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CC7FE911D41637B0075E1D1 /* HandsomeURLSessionTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HandsomeURLSessionTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		8CC7FE921D41637C0075E1D1 /* WhenTextIsRequestedSynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenTextIsRequestedSynchronously.swift; sourceTree = "<group>"; };
+		8CC7FE941D4166FD0075E1D1 /* URLSessionMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +80,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8CC7FE831D4162910075E1D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CC7FE8B1D4162910075E1D1 /* HandsomeURLSession.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +98,7 @@
 				8C6FC6D61D3E8D8500F52AE1 /* README.md */,
 				8C6FC6DA1D3E9E8F00F52AE1 /* HandsomeURLSession.podspec */,
 				8C6FC6A91D3E860400F52AE1 /* Sources */,
+				8CC7FE871D4162910075E1D1 /* HandsomeURLSessionTests */,
 				8C6FC6741D3E7C2900F52AE1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +110,7 @@
 				8C6FC6811D3E7F1900F52AE1 /* HandsomeURLSession.framework */,
 				8C6FC68E1D3E7F2800F52AE1 /* HandsomeURLSession.framework */,
 				8C6FC69B1D3E7F3800F52AE1 /* HandsomeURLSession.framework */,
+				8CC7FE861D4162910075E1D1 /* HandsomeURLSessionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,13 +120,23 @@
 			children = (
 				8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */,
 				8C5B9E2F1D40097B001C5135 /* HandsomeURLSession.m */,
-				8C6FC6AC1D3E861200F52AE1 /* HandsomeURLSession.modulemap */,
 				8C6FC6AD1D3E861200F52AE1 /* Info-iOS.plist */,
 				8C6FC6AE1D3E861200F52AE1 /* Info-macOS.plist */,
 				8C6FC6AF1D3E861200F52AE1 /* Info-tvOS.plist */,
 				8C6FC6B01D3E861200F52AE1 /* Info-watchOS.plist */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		8CC7FE871D4162910075E1D1 /* HandsomeURLSessionTests */ = {
+			isa = PBXGroup;
+			children = (
+				8CC7FE941D4166FD0075E1D1 /* URLSessionMocks.swift */,
+				8CC7FE921D41637C0075E1D1 /* WhenTextIsRequestedSynchronously.swift */,
+				8CC7FE911D41637B0075E1D1 /* HandsomeURLSessionTests-Bridging-Header.h */,
+				8CC7FE8A1D4162910075E1D1 /* Info.plist */,
+			);
+			path = HandsomeURLSessionTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +249,24 @@
 			productReference = 8C6FC69B1D3E7F3800F52AE1 /* HandsomeURLSession.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		8CC7FE851D4162910075E1D1 /* HandsomeURLSessionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CC7FE901D4162910075E1D1 /* Build configuration list for PBXNativeTarget "HandsomeURLSessionTests" */;
+			buildPhases = (
+				8CC7FE821D4162910075E1D1 /* Sources */,
+				8CC7FE831D4162910075E1D1 /* Frameworks */,
+				8CC7FE841D4162910075E1D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CC7FE8D1D4162910075E1D1 /* PBXTargetDependency */,
+			);
+			name = HandsomeURLSessionTests;
+			productName = HandsomeURLSessionTests;
+			productReference = 8CC7FE861D4162910075E1D1 /* HandsomeURLSessionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -232,6 +287,13 @@
 					8C6FC69A1D3E7F3800F52AE1 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					8CC7FE851D4162910075E1D1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7EBU6LEM32;
+						DevelopmentTeamName = "Andy Sherwood (Personal Team)";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 8C6FC66B1D3E712300F52AE1 /* Build configuration list for PBXProject "HandsomeURLSession" */;
@@ -250,6 +312,7 @@
 				8C6FC6801D3E7F1900F52AE1 /* HandsomeURLSession watchOS */,
 				8C6FC68D1D3E7F2800F52AE1 /* HandsomeURLSession tvOS */,
 				8C6FC69A1D3E7F3800F52AE1 /* HandsomeURLSession macOS */,
+				8CC7FE851D4162910075E1D1 /* HandsomeURLSessionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +340,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8C6FC6991D3E7F3800F52AE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CC7FE841D4162910075E1D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,7 +388,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8CC7FE821D4162910075E1D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CC7FE951D4166FD0075E1D1 /* URLSessionMocks.swift in Sources */,
+				8CC7FE931D41637C0075E1D1 /* WhenTextIsRequestedSynchronously.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CC7FE8D1D4162910075E1D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C6FC69A1D3E7F3800F52AE1 /* HandsomeURLSession macOS */;
+			targetProxy = 8CC7FE8C1D4162910075E1D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8C6FC66C1D3E712300F52AE1 /* Debug */ = {
@@ -416,7 +503,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = Sources/HandsomeURLSession.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "xinmy.name.HandsomeURLSession-iOS";
@@ -471,7 +558,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = Sources/HandsomeURLSession.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "xinmy.name.HandsomeURLSession-iOS";
 				PRODUCT_NAME = HandsomeURLSession;
@@ -529,7 +616,7 @@
 				INFOPLIST_FILE = "Sources/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = Sources/HandsomeURLSession.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "xinmy.name.HandsomeURLSession-watchOS";
@@ -583,7 +670,7 @@
 				INFOPLIST_FILE = "Sources/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = Sources/HandsomeURLSession.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "xinmy.name.HandsomeURLSession-watchOS";
 				PRODUCT_NAME = HandsomeURLSession;
@@ -642,7 +729,7 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = Sources/HandsomeURLSession.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "xinmy.name.HandsomeURLSession-tvOS";
@@ -696,7 +783,7 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = Sources/HandsomeURLSession.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "xinmy.name.HandsomeURLSession-tvOS";
 				PRODUCT_NAME = HandsomeURLSession;
@@ -759,7 +846,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_PRIVATE_FILE = Sources/HandsomeURLSession.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "xinmy.name.HandsomeURLSession-macOS";
@@ -815,7 +902,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_PRIVATE_FILE = Sources/HandsomeURLSession.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "xinmy.name.HandsomeURLSession-macOS";
 				PRODUCT_NAME = HandsomeURLSession;
@@ -823,6 +910,76 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8CC7FE8E1D4162910075E1D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = HandsomeURLSessionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = xinmy.name.HandsomeURLSessionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "HandsomeURLSessionTests/HandsomeURLSessionTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8CC7FE8F1D4162910075E1D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = HandsomeURLSessionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = xinmy.name.HandsomeURLSessionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "HandsomeURLSessionTests/HandsomeURLSessionTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -870,6 +1027,15 @@
 			buildConfigurations = (
 				8C6FC6A11D3E7F3800F52AE1 /* Debug */,
 				8C6FC6A21D3E7F3800F52AE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CC7FE901D4162910075E1D1 /* Build configuration list for PBXNativeTarget "HandsomeURLSessionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CC7FE8E1D4162910075E1D1 /* Debug */,
+				8CC7FE8F1D4162910075E1D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

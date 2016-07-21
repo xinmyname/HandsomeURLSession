@@ -1,6 +1,0 @@
-framework module HandsomeURLSession {
-    umbrella header "HandsomeURLSession.h"
-    
-    export *
-    module * { export * }
-}
