@@ -9,16 +9,16 @@
 import XCTest
 import HandsomeURLSession
 
-class WhenTextIsRequestedSynchronously: XCTestCase {
+class WhenDataIsRequestedSynchronously: XCTestCase {
 
-    let _request = URLRequest(url: URL(string:"http://marco.coffee")!)
-    let _text = "Casey was right."
+    let _request = URLRequest(url: URL(string:"http://hypercritical.co")!)
+    let _data = Data(base64Encoded: "Q2Fub25pY2FsIGJhZ2Vscw==")
     
-    func testThatTheTextMatches() {
+    func testThatTheDataMatches() {
         
-        let session = MockURLSession(for: _request, text:_text)
+        let session = MockURLSession(for: _request, data:_data)
         
-        XCTAssertEqual(try! session.awaitText(with: _request), _text)
+        XCTAssertEqual(try! session.awaitData(with: _request), _data)
     }
 
     func testThatFailedHTTPStatusCodeThrowsException() {

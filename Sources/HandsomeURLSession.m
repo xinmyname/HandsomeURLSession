@@ -2,14 +2,33 @@
 //  HandsomeURLSession.m
 //  HandsomeURLSession
 //
-//  Created by Andy Sherwood on 7/20/16.
-//  Copyright © 2016 Clean Water Services. All rights reserved.
+//  MIT License
 //
+//  Copyright (c) 2016 Andy Sherwood
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 
 #import "HandsomeURLSession.h"
 
 @implementation NSURLSession(Handsome)
 
+// TESTED
 - (NSURLSessionDataTask* _Nonnull)voidTaskWithRequest:(NSURLRequest* _Nonnull)request completionHandler:(void (^)(NSHTTPURLResponse* _Nullable, NSError* _Nullable))completionHandler
 {
     return [self dataTaskWithRequest:request completionHandler:^(NSData* data, NSURLResponse* response, NSError* error) {
@@ -17,6 +36,7 @@
     }];
 }
 
+// TESTED
 - (NSURLSessionDataTask* _Nonnull)textTaskWithRequest:(NSURLRequest* _Nonnull)request completionHandler:(void (^)(NSString* _Nullable, NSHTTPURLResponse* _Nullable, NSError* _Nullable))completionHandler
 {
     return [self dataTaskWithRequest:request completionHandler:^(NSData* data, NSURLResponse* response, NSError* error) {
@@ -94,7 +114,7 @@
 }
 #endif
 
-
+// TESTED
 - (NSData* _Nullable)awaitDataWithRequest:(NSURLRequest* _Nonnull)request error:(NSError* _Nullable * _Null_unspecified)error
 {
     dispatch_semaphore_t sem = dispatch_semaphore_create(0);
@@ -131,6 +151,7 @@
     return resData;
 }
 
+// TESTED
 - (BOOL)awaitVoidWithRequest:(NSURLRequest* _Nonnull)request error:(NSError* _Nullable * _Null_unspecified)error
 {
     dispatch_semaphore_t sem = dispatch_semaphore_create(0);
@@ -161,6 +182,7 @@
     return *error == nil;
 }
 
+// TESTED
 - (NSString* _Nullable)awaitTextWithRequest:(NSURLRequest* _Nonnull)request error:(NSError* _Nullable * _Null_unspecified)error
 {
     NSData* data = [self awaitDataWithRequest:request error:error];

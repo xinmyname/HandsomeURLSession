@@ -46,6 +46,18 @@ class MockURLSession: URLSession {
         _response = response
     }
     
+    convenience init(for request:URLRequest, statusCode:Int) {
+        self.init(response: MockResponse(request:request, statusCode:statusCode))
+    }
+
+    convenience init(for request:URLRequest, text:String?) {
+        self.init(response: MockResponse(request:request, text:text))
+    }
+
+    convenience init(for request:URLRequest, data:Data?) {
+        self.init(response: MockResponse(request:request, data:data))
+    }
+    
     override func dataTask(with request: URLRequest, completionHandler: (Data?, URLResponse?, NSError?) -> Void) -> URLSessionDataTask {
         return MockURLSessionDataTask(request:request, response:_response, queue:_queue, completionHandler:completionHandler)
     }
@@ -60,13 +72,13 @@ class MockResponse {
     var data:Data?
     var urlResponse:URLResponse?
     
-    init(request:URLRequest, data:Data) {
+    init(request:URLRequest, data:Data?) {
         self.data = data
         self.urlResponse = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: [:])
     }
     
-    init(request:URLRequest, text:String) {
-        self.data = text.data(using: .utf8)
+    init(request:URLRequest, text:String?) {
+        self.data = text?.data(using: .utf8)
         self.urlResponse = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: [:])
     }
     

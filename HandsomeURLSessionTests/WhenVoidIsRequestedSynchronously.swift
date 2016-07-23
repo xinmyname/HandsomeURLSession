@@ -9,30 +9,29 @@
 import XCTest
 import HandsomeURLSession
 
-class WhenTextIsRequestedSynchronously: XCTestCase {
+class WhenVoidIsRequestedSynchronously: XCTestCase {
 
-    let _request = URLRequest(url: URL(string:"http://marco.coffee")!)
-    let _text = "Casey was right."
+    let _request = URLRequest(url: URL(string:"http://atp.fm/feedback")!)
     
-    func testThatTheTextMatches() {
+    func testThatSuccessfulHTTPStatusCodeDoesntThrowException() {
         
-        let session = MockURLSession(for: _request, text:_text)
+        let session = MockURLSession(for: _request, statusCode: 200)
         
-        XCTAssertEqual(try! session.awaitText(with: _request), _text)
+        try! session.awaitVoid(with: _request)
     }
 
     func testThatFailedHTTPStatusCodeThrowsException() {
         
         let session = MockURLSession(for: _request, statusCode: 404)
         
-        XCTAssertThrowsError(try session.awaitText(with: _request))
+        XCTAssertThrowsError(try session.awaitVoid(with: _request))
     }
 
     func testThatNoResponseThrowsException() {
         
         let session = MockURLSession(response: nil)
         
-        XCTAssertThrowsError(try session.awaitText(with: _request))
+        XCTAssertThrowsError(try session.awaitVoid(with: _request))
     }
     
 }
