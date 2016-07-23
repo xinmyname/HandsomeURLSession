@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name              = "HandsomeURLSession"
-  s.version           = "1.1.1"
+  s.version           = "1.1.2"
   s.summary           = "NSURLSession extension that provides tasks for common HTTP responses (UTF8 text, images, JSON and XML) and synchronous API"
   s.homepage          = "https://github.com/xinmyname/HandsomeURLSession"
   s.license           = "MIT"

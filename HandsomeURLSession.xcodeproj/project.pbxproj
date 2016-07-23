@@ -22,6 +22,8 @@
 		A15796C61D42C815004CFFC1 /* WhenDataIsRequestedSynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15796C51D42C815004CFFC1 /* WhenDataIsRequestedSynchronously.swift */; };
 		A15796CA1D42CB89004CFFC1 /* WhenVoidIsRequestedSynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15796C91D42CB89004CFFC1 /* WhenVoidIsRequestedSynchronously.swift */; };
 		A15796CC1D43C9B5004CFFC1 /* WhenVoidIsRequestedAsynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15796CB1D43C9B5004CFFC1 /* WhenVoidIsRequestedAsynchronously.swift */; };
+		A15796CF1D43CC72004CFFC1 /* WhenJsonIsRequestedAsynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15796CD1D43CC72004CFFC1 /* WhenJsonIsRequestedAsynchronously.swift */; };
+		A15796D01D43CC72004CFFC1 /* WhenJsonIsRequestedSynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15796CE1D43CC72004CFFC1 /* WhenJsonIsRequestedSynchronously.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		A15796C51D42C815004CFFC1 /* WhenDataIsRequestedSynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenDataIsRequestedSynchronously.swift; sourceTree = "<group>"; };
 		A15796C91D42CB89004CFFC1 /* WhenVoidIsRequestedSynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenVoidIsRequestedSynchronously.swift; sourceTree = "<group>"; };
 		A15796CB1D43C9B5004CFFC1 /* WhenVoidIsRequestedAsynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenVoidIsRequestedAsynchronously.swift; sourceTree = "<group>"; };
+		A15796CD1D43CC72004CFFC1 /* WhenJsonIsRequestedAsynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenJsonIsRequestedAsynchronously.swift; sourceTree = "<group>"; };
+		A15796CE1D43CC72004CFFC1 /* WhenJsonIsRequestedSynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenJsonIsRequestedSynchronously.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				A15796C51D42C815004CFFC1 /* WhenDataIsRequestedSynchronously.swift */,
+				A15796CD1D43CC72004CFFC1 /* WhenJsonIsRequestedAsynchronously.swift */,
+				A15796CE1D43CC72004CFFC1 /* WhenJsonIsRequestedSynchronously.swift */,
 				8CC7FE921D41637C0075E1D1 /* WhenTextIsRequestedAsynchronously.swift */,
 				A15796C31D42A7CE004CFFC1 /* WhenTextIsRequestedSynchronously.swift */,
 				A15796CB1D43C9B5004CFFC1 /* WhenVoidIsRequestedAsynchronously.swift */,
@@ -404,8 +410,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15796CF1D43CC72004CFFC1 /* WhenJsonIsRequestedAsynchronously.swift in Sources */,
 				8CC7FE951D4166FD0075E1D1 /* URLSessionMocks.swift in Sources */,
 				A15796CC1D43C9B5004CFFC1 /* WhenVoidIsRequestedAsynchronously.swift in Sources */,
+				A15796D01D43CC72004CFFC1 /* WhenJsonIsRequestedSynchronously.swift in Sources */,
 				A15796C61D42C815004CFFC1 /* WhenDataIsRequestedSynchronously.swift in Sources */,
 				A15796C41D42A7CE004CFFC1 /* WhenTextIsRequestedSynchronously.swift in Sources */,
 				A15796CA1D42CB89004CFFC1 /* WhenVoidIsRequestedSynchronously.swift in Sources */,
