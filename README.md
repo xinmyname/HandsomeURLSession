@@ -1,4 +1,4 @@
-# HandsomeURLSession v1.1
+# HandsomeURLSession v1.2
 
 This extension to NSURLSession gives you typed responses from HTTP requests, both asynchronous and synchronous. Exceptions are thrown if an error occurs.
 
@@ -120,12 +120,3 @@ catch let error as NSError {
 
 Shoutout to Basem Emara whose blog post got me started: [Creating Cross-Platform Swift Frameworks for iOS, watchOS, and tvOS via Carthage and CocoaPods](http://basememara.com/creating-cross-platform-swift-frameworks-ios-watchos-tvos-via-carthage-cocoapods/)
 
-## Release History
-
-### v1.1
-* Backported to Objective-C - Didn't like how Swift framework integrated into projects, especially with Xcode 8 and Swift 3.
-* Compatible with Objective-C, Swift 1, 2 and 3 now.
-
-### v1.0
-* Initial Release
-* Code was Swift 2.2

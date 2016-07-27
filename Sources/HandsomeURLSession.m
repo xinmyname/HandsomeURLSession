@@ -183,6 +183,29 @@
 }
 
 // TESTED
+- (NSHTTPURLResponse* _Nullable)awaitResponseWithRequest:(NSURLRequest* _Nonnull)request
+                                                   error:(NSError* _Nullable * _Null_unspecified)error
+{
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
+    NSError* __block resError = nil;
+    NSHTTPURLResponse* __block response = nil;
+    
+    NSURLSessionDataTask* task = [self dataTaskWithRequest:request completionHandler:^(NSData* c_data, NSURLResponse* c_response, NSError* c_error) {
+        
+        response = (NSHTTPURLResponse*)c_response;
+        resError = c_error;
+        
+        dispatch_semaphore_signal(sem);
+    }];
+    
+    [task resume];
+    
+    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    
+    return response;
+}
+
+// TESTED
 - (NSString* _Nullable)awaitTextWithRequest:(NSURLRequest* _Nonnull)request error:(NSError* _Nullable * _Null_unspecified)error
 {
     NSData* data = [self awaitDataWithRequest:request error:error];

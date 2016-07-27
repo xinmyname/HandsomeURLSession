@@ -138,6 +138,17 @@ FOUNDATION_EXPORT const unsigned char HandsomeURLSession_VersionString[];
                        error:(NSError* _Nullable * _Null_unspecified)error;
 
 /**
+ Synchronously sends a request to a URL.
+ 
+ @param request Includes URL, HTTP method, body, headers, etc.
+ @param error `nil` if successful, otherwise an `NSError` object with information about the error.
+ @returns YES if successful, otherwise NO.
+ */
+- (NSHTTPURLResponse* _Nullable)awaitResponseWithRequest:(NSURLRequest* _Nonnull)request
+                                                   error:(NSError* _Nullable * _Null_unspecified)error;
+
+
+/**
  Synchronously sends a request to a URL and returns UTF8 text.
  
  @param request Includes URL, HTTP method, body, headers, etc.

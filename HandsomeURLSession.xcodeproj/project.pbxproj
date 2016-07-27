@@ -15,6 +15,8 @@
 		8C6FC6BA1D3E863D00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C6FC6BB1D3E863D00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C6FC6BC1D3E863E00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C9BF2AD1D49447500F3BB93 /* WhenResponseIsRequestedSynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BF2AC1D49447500F3BB93 /* WhenResponseIsRequestedSynchronously.swift */; };
+		8C9BF2AF1D49476300F3BB93 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BF2AE1D49476300F3BB93 /* CHANGELOG.md */; };
 		8CC7FE8B1D4162910075E1D1 /* HandsomeURLSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6FC69B1D3E7F3800F52AE1 /* HandsomeURLSession.framework */; };
 		8CC7FE931D41637C0075E1D1 /* WhenTextIsRequestedAsynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7FE921D41637C0075E1D1 /* WhenTextIsRequestedAsynchronously.swift */; };
 		8CC7FE951D4166FD0075E1D1 /* URLSessionMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7FE941D4166FD0075E1D1 /* URLSessionMocks.swift */; };
@@ -50,6 +52,8 @@
 		8C6FC6D61D3E8D8500F52AE1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8C6FC6D81D3E8D9300F52AE1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8C6FC6DA1D3E9E8F00F52AE1 /* HandsomeURLSession.podspec */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = HandsomeURLSession.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		8C9BF2AC1D49447500F3BB93 /* WhenResponseIsRequestedSynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenResponseIsRequestedSynchronously.swift; sourceTree = "<group>"; };
+		8C9BF2AE1D49476300F3BB93 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		8CC7FE861D4162910075E1D1 /* HandsomeURLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsomeURLSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC7FE8A1D4162910075E1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CC7FE911D41637B0075E1D1 /* HandsomeURLSessionTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HandsomeURLSessionTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			children = (
 				8C6FC6D81D3E8D9300F52AE1 /* LICENSE */,
 				8C6FC6D61D3E8D8500F52AE1 /* README.md */,
+				8C9BF2AE1D49476300F3BB93 /* CHANGELOG.md */,
 				8C6FC6DA1D3E9E8F00F52AE1 /* HandsomeURLSession.podspec */,
 				8C6FC6A91D3E860400F52AE1 /* Sources */,
 				8CC7FE871D4162910075E1D1 /* HandsomeURLSessionTests */,
@@ -143,6 +148,7 @@
 		8CC7FE871D4162910075E1D1 /* HandsomeURLSessionTests */ = {
 			isa = PBXGroup;
 			children = (
+				8C9BF2AC1D49447500F3BB93 /* WhenResponseIsRequestedSynchronously.swift */,
 				A15796C51D42C815004CFFC1 /* WhenDataIsRequestedSynchronously.swift */,
 				A15796CD1D43CC72004CFFC1 /* WhenJsonIsRequestedAsynchronously.swift */,
 				A15796CE1D43CC72004CFFC1 /* WhenJsonIsRequestedSynchronously.swift */,
@@ -411,12 +417,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15796CF1D43CC72004CFFC1 /* WhenJsonIsRequestedAsynchronously.swift in Sources */,
+				8C9BF2AF1D49476300F3BB93 /* CHANGELOG.md in Sources */,
 				8CC7FE951D4166FD0075E1D1 /* URLSessionMocks.swift in Sources */,
 				A15796CC1D43C9B5004CFFC1 /* WhenVoidIsRequestedAsynchronously.swift in Sources */,
 				A15796D01D43CC72004CFFC1 /* WhenJsonIsRequestedSynchronously.swift in Sources */,
 				A15796C61D42C815004CFFC1 /* WhenDataIsRequestedSynchronously.swift in Sources */,
 				A15796C41D42A7CE004CFFC1 /* WhenTextIsRequestedSynchronously.swift in Sources */,
 				A15796CA1D42CB89004CFFC1 /* WhenVoidIsRequestedSynchronously.swift in Sources */,
+				8C9BF2AD1D49447500F3BB93 /* WhenResponseIsRequestedSynchronously.swift in Sources */,
 				8CC7FE931D41637C0075E1D1 /* WhenTextIsRequestedAsynchronously.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
