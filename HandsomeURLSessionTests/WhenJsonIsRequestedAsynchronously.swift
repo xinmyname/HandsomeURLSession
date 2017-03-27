@@ -19,7 +19,7 @@ class WhenJsonIsRequestedAsynchronously: XCTestCase {
         let session = MockURLSession(for: _request, jsonText:_jsonText)
         let exp = expectation(description: "")
         
-        let task = session.jsonTask(with: _request) { (json:AnyObject?, response:HTTPURLResponse?, error:NSError?) in
+        let task = session.jsonTask(with: _request) { (json:Any?, response:HTTPURLResponse?, error:Error?) in
             
             guard let json = json else {
                 XCTFail()
@@ -44,7 +44,7 @@ class WhenJsonIsRequestedAsynchronously: XCTestCase {
         let session = MockURLSession(for: _request, statusCode:expectedStatusCode)
         let exp = expectation(description: "")
         
-        let task = session.jsonTask(with: _request) { (json:AnyObject?, response:HTTPURLResponse?, error:NSError?) in
+        let task = session.jsonTask(with: _request) { (json:Any?, response:HTTPURLResponse?, error:Error?) in
             
             XCTAssertNil(json)
             XCTAssertEqual(response?.statusCode, expectedStatusCode)
@@ -61,7 +61,7 @@ class WhenJsonIsRequestedAsynchronously: XCTestCase {
         let session = MockURLSession(response: nil)
         let exp = expectation(description: "")
         
-        let task = session.jsonTask(with: _request) { (json:AnyObject?, response:HTTPURLResponse?, error:NSError?) in
+        let task = session.jsonTask(with: _request) { (json:Any?, response:HTTPURLResponse?, error:Error?) in
             
             XCTAssertNil(json)
             XCTAssertNil(response)

@@ -13,9 +13,9 @@ class MockURLSessionDataTask: URLSessionDataTask {
     private let _request:URLRequest
     private let _response:MockResponse?
     private let _queue:DispatchQueue
-    private let _completionHandler: (Data?, URLResponse?, NSError?) -> Void
+    private let _completionHandler: (Data?, URLResponse?, Error?) -> Void
     
-    init(request:URLRequest, response:MockResponse?, queue:DispatchQueue, completionHandler: (Data?, URLResponse?, NSError?) -> Void) {
+    init(request:URLRequest, response:MockResponse?, queue:DispatchQueue, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         _request = request
         _response = response
         _queue = queue
@@ -64,7 +64,7 @@ class MockURLSession: URLSession {
         self.init(response: MockResponse(request:request, data:data))
     }
     
-    override func dataTask(with request: URLRequest, completionHandler: (Data?, URLResponse?, NSError?) -> Void) -> URLSessionDataTask {
+    override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return MockURLSessionDataTask(request:request, response:_response, queue:_queue, completionHandler:completionHandler)
     }
     

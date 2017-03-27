@@ -19,7 +19,7 @@ class WhenVoidIsRequestedAsynchronously: XCTestCase {
         let session = MockURLSession(for: _request, statusCode:expectedStatusCode)
         let exp = expectation(description: "")
         
-        let task = session.textTask(with: _request) { (text:String?, response:HTTPURLResponse?, error:NSError?) in
+        let task = session.textTask(with: _request) { (text:String?, response:HTTPURLResponse?, error:Error?) in
             
             XCTAssertEqual(response?.statusCode, expectedStatusCode)
             XCTAssertNil(error)
@@ -36,7 +36,7 @@ class WhenVoidIsRequestedAsynchronously: XCTestCase {
         let session = MockURLSession(response: nil)
         let exp = expectation(description: "")
         
-        let task = session.textTask(with: _request) { (text:String?, response:HTTPURLResponse?, error:NSError?) in
+        let task = session.textTask(with: _request) { (text:String?, response:HTTPURLResponse?, error:Error?) in
             
             XCTAssertNil(response)
             XCTAssertNotNil(error)

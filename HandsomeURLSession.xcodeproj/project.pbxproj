@@ -16,7 +16,6 @@
 		8C6FC6BB1D3E863D00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C6FC6BC1D3E863E00F52AE1 /* HandsomeURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6FC6AB1D3E861200F52AE1 /* HandsomeURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C9BF2AD1D49447500F3BB93 /* WhenResponseIsRequestedSynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BF2AC1D49447500F3BB93 /* WhenResponseIsRequestedSynchronously.swift */; };
-		8C9BF2AF1D49476300F3BB93 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 8C9BF2AE1D49476300F3BB93 /* CHANGELOG.md */; };
 		8CC7FE8B1D4162910075E1D1 /* HandsomeURLSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6FC69B1D3E7F3800F52AE1 /* HandsomeURLSession.framework */; };
 		8CC7FE931D41637C0075E1D1 /* WhenTextIsRequestedAsynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7FE921D41637C0075E1D1 /* WhenTextIsRequestedAsynchronously.swift */; };
 		8CC7FE951D4166FD0075E1D1 /* URLSessionMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7FE941D4166FD0075E1D1 /* URLSessionMocks.swift */; };
@@ -297,7 +296,7 @@
 		8C6FC6681D3E712300F52AE1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				TargetAttributes = {
 					8C6FC6721D3E7C2900F52AE1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -417,7 +416,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15796CF1D43CC72004CFFC1 /* WhenJsonIsRequestedAsynchronously.swift in Sources */,
-				8C9BF2AF1D49476300F3BB93 /* CHANGELOG.md in Sources */,
 				8CC7FE951D4166FD0075E1D1 /* URLSessionMocks.swift in Sources */,
 				A15796CC1D43C9B5004CFFC1 /* WhenVoidIsRequestedAsynchronously.swift in Sources */,
 				A15796D01D43CC72004CFFC1 /* WhenJsonIsRequestedSynchronously.swift in Sources */,
@@ -447,7 +445,9 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -472,7 +472,9 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -485,6 +487,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -507,7 +510,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -568,7 +571,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -622,6 +625,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -682,6 +686,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -735,6 +740,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -795,6 +801,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
