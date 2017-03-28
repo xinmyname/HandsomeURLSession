@@ -1,4 +1,4 @@
-# HandsomeURLSession v1.2
+# HandsomeURLSession v1.2.1
 
 This extension to NSURLSession gives you typed responses from HTTP requests, both asynchronous and synchronous. Exceptions are thrown if an error occurs.
 

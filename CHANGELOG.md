@@ -1,3 +1,6 @@
+# v1.2.1
+* Swift 3.1 compatability
+
 # v1.2
 * Added awaitResponse
 
